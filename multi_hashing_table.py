@@ -67,5 +67,6 @@ def insert_flows(flows, hashes, hash_table):
         for flow_hash_id in flow_hash_ids:
             if hash_table[flow_hash_id] == 0:
                 hash_table[flow_hash_id] = flow
+# insert_flows()
 
 main()
