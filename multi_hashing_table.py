@@ -21,6 +21,9 @@ def main():
     for i in range(num_flows):
         flows[i] = random.randrange(10000000)
 
+    # Uncomment next line to check for duplicate flow id
+    check_id_dups(flows)
+
     # Creating multiple hashes
     hashes = []
     for hash in range(num_hashes):
@@ -34,19 +37,28 @@ def main():
     for index in range(len(hash_table)):
         print(str(index) + ": " + str(hash_table[index]))
 
+    # Uncomment next line to check for duplicates in hash table
+    check_id_dups(hash_table)
 # main()
 
-# Checks number of duplicate IDs [For testing purposes]
-def check_flow_id_dups(flows):
-    dup = -1
+
+# Givens: List of flow ids
+# Returns: None
+# Description: Checks for duplicate flow ids in a list [For testing purposes]
+def check_id_dups(flows):
+    duplicate_ids = []
+    dup = 0
     for flow in flows:
         for flow2 in flows:
             if flow == flow2:
-                dup += 1
-        if dup > 0:
-            print(dup)
+                if flow != 0:   # Important if checking for duplicates in hash table
+                    dup += 1
+        if dup > 1:             # dup will be 1 if there are no duplicates (1 count of flow id)
+            if duplicate_ids.count(flow) == 0:
+                duplicate_ids.append(flow)
+                print("Duplicate id " + str(flow) + " found with " + str(dup) + " counts")
         dup = -1
-# check_flow_id_dups()
+# check_id_dups()
 
 
 # Inputs: Id of flow to hash, number of entries in the hash table
@@ -79,6 +91,7 @@ def insert_flows(flows, hashes, hash_table):
         for flow_hash_id in flow_hash_ids:
             if hash_table[flow_hash_id] == 0:
                 hash_table[flow_hash_id] = flow
+                break
 # insert_flows()
 
 main()
