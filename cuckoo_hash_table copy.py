@@ -80,9 +80,29 @@ def insert_flows(flows, hashes, hash_table):
             if hash_table[flow_hash_id] == 0:
                 hash_table[flow_hash_id] = flow
 
+        # If there were no empty entries, try to move a flow in one of the entries
+        move_successful = False
+        for flow_hash_id in flow_hash_ids:
+            move_successful = move_flow(hash_table[flow_hash_id], hashes, hash_table)
+            # If move was successful, insert current new flow
+            if move_successful:
+                hash_table[flow_hash_id] = flow
+
+
 # insert_flows()
 
 def move_flow(flow, hashes, hash_table):
+    # Generating multiple hash entries
+    flow_hash_ids = []
+    for hash in hashes:
+        hash_id = hash_function(flow^hash, len(hash_table))
+        flow_hash_ids.append(hash_id)
+        
+    # Inserting flow in first matched empty entry
+    for flow_hash_id in flow_hash_ids:
+        if hash_table[flow_hash_id] == 0:
+            hash_table[flow_hash_id] = flow
+    
     return
 
 main()
