@@ -22,7 +22,7 @@ def main():
         flows[i] = random.randrange(10000000)
 
     # Uncomment next line to check for duplicate flow id
-    check_id_dups(flows)
+    # check_id_dups(flows)
 
     # Creating multiple hashes
     hashes = []
@@ -38,7 +38,7 @@ def main():
         print(str(index) + ": " + str(hash_table[index]))
 
     # Uncomment next line to check for duplicates in hash table
-    check_id_dups(hash_table)
+    # check_id_dups(hash_table)
 # main()
 
 
