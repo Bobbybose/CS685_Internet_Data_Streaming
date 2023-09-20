@@ -79,7 +79,8 @@ def hash_function(flow_id, num_table_entries):
 
 # Inputs: Flows to insert, hashes to use to hash flow into table, hash table to put flows in
 # Returns: None
-# Description: Inserts all flows into the hash table using a given number of hashes per flow
+# Description: Inserts all flows into the hash table using a given number of hashes per flow. 
+#   If all entries are filled, try to move a flow id in one of the filled entries
 def insert_flows(flows, hashes, hash_table, cuckoo_steps):
     for flow in flows:    
         insert_success = False
@@ -109,7 +110,8 @@ def insert_flows(flows, hashes, hash_table, cuckoo_steps):
 
 # Inputs: Flow to move, hashes to use, hash table, number of cuckoo steps to take
 # Returns: Whether move was successful
-# Description: Tries to move a flow in the hash table to another of it's hashed entries. If not possible, possibly recurse if there are cuckoo steps left
+# Description: Tries to move a flow in the hash table to another of it's hashed entries. 
+#   If not possible, recurse if there are cuckoo steps left
 def move_flow(flow, hashes, hash_table, cuckoo_steps):
     # Generating multiple hash entries
     flow_hash_ids = []
