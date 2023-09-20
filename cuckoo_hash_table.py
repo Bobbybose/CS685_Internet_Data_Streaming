@@ -5,7 +5,7 @@ def main():
     # Checking that the right number of arguments have been passed
     if len(sys.argv) != 5:
         print("Invalid number of arguments")
-        print("Program should be run in form 'python ./cuckoo_hash_table.py num_table_entries num_flows num_hashes'")
+        print("Program should be run in form 'python ./cuckoo_hash_table.py num_table_entries num_flows num_hashes cuckoo_steps'")
         return
 
     # Setting input parameters
