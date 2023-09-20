@@ -1,10 +1,12 @@
-CS685-Internet Data Streaming Project 1 - Implementation of Hash Tables
+CS685 - Internet Data Streaming 
+Project 1 - Implementation of Hash Tables
 Author: Bobby Bose
 
 Description
 - This is an implementation of three types of hash tables: multi-hash tables, cuckoo hash tables, and d-left hash tables
 - There are three Python scripts, one for each hash table implementation
 - An example output is given in three output (.out) files
+- Hash function was based off of the folding method from https://www.herevego.com/hashing-python/
 
 Required Packages and Modules
 - No external packages required 
