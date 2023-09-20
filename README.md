@@ -1,5 +1,5 @@
 # CS685-Internet Data Streaming Project 1 - Implementation of Hash Tables
-# Author: Bobby Bose
+**Author:** Bobby Bose
 
 ## Description
 - This is an implementation of three types of hash tables: multi-hash tables, cuckoo hash tables, and d-left hash tables
