@@ -1,4 +1,5 @@
-# CS685-Internet Data Streaming Project 1 - Implementation of Hash Tables
+# CS685-Internet Data Streaming 
+# Project 1 - Implementation of Hash Tables
 **Author:** Bobby Bose
 
 ## Description
