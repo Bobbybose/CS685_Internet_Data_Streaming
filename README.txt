@@ -1,4 +1,4 @@
-CS685-Internet Data Streaming Project 1 - Implementation of Hash Tables
+# CS685-Internet Data Streaming Project 1 - Implementation of Hash Tables
 Author: Bobby Bose
 
 Description
@@ -46,7 +46,7 @@ D-left Hash table
     - Each flow is hashed to one entry in each segment
     - Flow is inserted into the first empty entry
     - If no entries are empty, flow is not recorded
-    
+
 - Output
     - First line of output is the number of flows recorded
     - Rest of output is the list of table entries
