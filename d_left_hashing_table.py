@@ -40,7 +40,7 @@ def main():
     num_entries_filled = 0
     for segment in range(num_hashes):
         num_entries_filled += 250-hash_table[segment].count(0)
-    print("Number of flows: " + str(num_entries_filled))
+    print(num_entries_filled)
     for segment in range(num_hashes):
         for index in range(num_entries_per_segment):
             print(str(index+(250*segment)) + ": " + str(hash_table[segment][index]))

@@ -33,7 +33,7 @@ def main():
     insert_flows(flows, hashes, hash_table)
 
     # Printing results
-    print("Number of flows: " + str(1000-hash_table.count(0)))
+    print(1000-hash_table.count(0))
     for index in range(len(hash_table)):
         print(str(index) + ": " + str(hash_table[index]))
 
