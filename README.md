@@ -26,13 +26,13 @@
         - If there is no flow presented, the entry is just 0
 
 ## Cuckoo Hash table
-- To run, do ''python ./cuckoo_hash_table.py num_table_entries num_flows num_hashes cuckoo_steps''
+- To run, do 'python ./cuckoo_hash_table.py num_table_entries num_flows num_hashes cuckoo_steps'
 - **Operation:**
     - Hashes a given number of flows into a hash table
     - Each flow is hashed to a given number of different entries
     - Flow is inserted into the first empty entry
     - If no entries are empty, then program tries to move a flow in one of the filled entries to one of that flow's other entries
-        - If that doesn't work, possibly recurse if there are enough cuckoo steps left
+        - If that doesn't work, possibly recurse if there are cuckoo steps left
     - If no entry is empty and no flow(s) can be moved, then flow is not recorded
 - **Output:**
     - First line of output is the number of flows recorded
@@ -41,7 +41,7 @@
         - If there is no flow presented, the entry is just 0
 
 ## D-left Hash table
-- To run, do ''python ./d_left_hashing_table.py num_table_entries num_flows num_hashes num_segments''
+- To run, do 'python ./d_left_hashing_table.py num_table_entries num_flows num_hashes num_segments'
 - **Operation:**
     - Hashes a given number of flows into a hash table
     - Hash table is divided up into a given number of segments
